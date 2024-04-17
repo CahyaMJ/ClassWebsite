@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+}
+
+.bet {
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: black;
+}
+.ID-Card {
+  width: 200px;
+  height: 320px;
+}
+.flip-card {
+  width: 200px;
+  height: 320px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  color: black;
+  padding-top: 20%;
+}
+
+.flip-card-back {
+  font-size: 10px;
+  color: black;
+  transform: rotateY(180deg);
+  background-color: gray;
+  border: 1px solid red;
+}
